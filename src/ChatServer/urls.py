@@ -18,11 +18,17 @@ from django.urls import path
 from personal.views import (
 	home_screen_view
 )
+from account.views import (
+    register_view,
+
+)
+
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('', home_screen_view, name='home'),
+    path('register/', register_view, name="register"), 
     path('admin/', admin.site.urls),
 ]
 
