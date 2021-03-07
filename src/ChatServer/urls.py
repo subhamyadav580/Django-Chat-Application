@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path
+from django.conf.urls import include
 from personal.views import (
 	home_screen_view
 )
@@ -30,6 +31,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', home_screen_view, name='home'),
+    path('account/', include('account.urls', namespace='account')),
     path('register/', register_view, name="register"), 
     path('login/', login_view, name="login"),
     path('logout/', logout_view, name="logout"),
