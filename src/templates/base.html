@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
 	<link href="https://fonts.googleapis.com/css2?family=Material+Icons"
         rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'cropperjs/dist/cropper.min.css' %}">
 </head>
 
 <body>
@@ -36,7 +37,19 @@
 
 <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script> 
 <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script> 
+<script type="module" src="{% static 'cropperjs/dist/cropper.min.js' %}"></script>
 
+<script type="text/javascript">
+	function displayLoadingSpinner(isDisplayed){
+		var spinner = document.getElementById("id_loading_spinner")
+		if(isDisplayed){
+			spinner.style.display = "block"
+		}
+		else{
+			spinner.style.display = "none"
+		}
+	}
+</script>
 
 </body>
 
