@@ -34,7 +34,14 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.AllowAllUsersModelBackend', 
     'account.backends.CaseInsensitiveModelBackend',
     )
-    
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -49,6 +56,9 @@ INSTALLED_APPS = [
     'account',
     'friend',
     'public_chat',
+
+    'rest_framework',
+    'accountAPI',
 ]
 
 MIDDLEWARE = [
