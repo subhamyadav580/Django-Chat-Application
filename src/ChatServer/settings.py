@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'channels',
+
     'personal',
     'account',
     'friend',
@@ -90,6 +92,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ChatServer.wsgi.application'
+
+ASGI_APPLICATION = 'ChatServer.routing.application'
 
 
 # Database
